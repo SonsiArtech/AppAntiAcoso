@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Item" />
-    <item android:title="Noticias" />
-    <item android:title="Ayuda" />
-    <item android:title="Cerrar Sesión" />
+    <item
+        android:id="@+id/opHome"
+        android:icon="@mipmap/hogar"
+        android:title="@string/home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/opPublicacion"
+        android:icon="@mipmap/mas"
+        android:title="@string/publicaci_n"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/opDenuncia"
+        android:icon="@mipmap/advertencia"
+        android:title="@string/denuncia"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/opNoticias"
+        android:icon="@mipmap/noticias"
+        android:title="@string/noticias" />
+    <item
+        android:id="@+id/opAyuda"
+        android:icon="@mipmap/ayudar"
+        android:title="@string/ayuda" />
+    <item
+        android:id="@+id/opCerrarSesion"
+        android:title="@string/cerrar_sesi_n" />
 </menu>

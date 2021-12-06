@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Anti_acoso</string>
+    <string name="denuncia">Denuncia</string>
+    <string name="noticias">Noticias</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="home">Home</string>
+    <string name="publicaci_n">Publicación</string>
 </resources>

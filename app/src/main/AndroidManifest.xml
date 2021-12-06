@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Anti_acoso">
         <activity
+            android:name=".Ayuda"
+            android:exported="false" />
+        <activity
+            android:name=".Noticias"
+            android:exported="false" />
+        <activity
+            android:name=".Denuncia"
+            android:exported="false" />
+        <activity
             android:name=".Registrarse"
             android:exported="false" />
         <activity
