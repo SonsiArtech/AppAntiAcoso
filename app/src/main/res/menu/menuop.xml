@@ -17,6 +17,9 @@
         android:title="@string/denuncia"
         app:showAsAction="always" />
     <item
+        android:id="@+id/opAmigos"
+        android:title="Amigos" />
+    <item
         android:id="@+id/opNoticias"
         android:icon="@mipmap/noticias"
         android:title="@string/noticias" />

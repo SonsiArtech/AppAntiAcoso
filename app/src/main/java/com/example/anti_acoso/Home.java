@@ -8,14 +8,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
+
+    private TextView tvNombre;
+    private TextView tvContrasena;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        tvNombre = findViewById(R.id.tvUsuario);
+        tvContrasena = findViewById(R.id.tvPass);
+
+        Bundle bundle = getIntent().getExtras();
+
+        tvNombre.setText(bundle.getString("nombre"));
+        tvContrasena.setText(bundle.getString("contrasena"));
     }
 
     //nos ayuda a colocar el menu en nuestras paginas
@@ -48,17 +61,23 @@ public class Home extends AppCompatActivity {
                 Intent intent2 = new Intent(this, Denuncia.class);
                 startActivity(intent2);
                 break;
-            case R.id.opNoticias:
+            case R.id.opAmigos:
                 Toast.makeText(this,"Noticias seleccionado",Toast.LENGTH_SHORT).show();
                 finish();
                 Intent intent3 = new Intent(this, Noticias.class);
                 startActivity(intent3);
                 break;
+            case R.id.opNoticias:
+                Toast.makeText(this,"Noticias seleccionado",Toast.LENGTH_SHORT).show();
+                finish();
+                Intent intent4 = new Intent(this, Noticias.class);
+                startActivity(intent4);
+                break;
             case R.id.opAyuda:
                 Toast.makeText(this,"Ayuda seleccionado",Toast.LENGTH_SHORT).show();
                 finish();
-                Intent intent4 = new Intent(this, Ayuda.class);
-                startActivity(intent4);
+                Intent intent5 = new Intent(this, Ayuda.class);
+                startActivity(intent5);
                 break;
             case R.id.opCerrarSesion:
                 Toast.makeText(this,"Cerrando Sesión",Toast.LENGTH_SHORT).show();
