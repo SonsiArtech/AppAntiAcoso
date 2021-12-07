@@ -62,9 +62,9 @@ public class Home extends AppCompatActivity {
                 startActivity(intent2);
                 break;
             case R.id.opAmigos:
-                Toast.makeText(this,"Noticias seleccionado",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Amigos seleccionado",Toast.LENGTH_SHORT).show();
                 finish();
-                Intent intent3 = new Intent(this, Noticias.class);
+                Intent intent3 = new Intent(this, Amigos.class);
                 startActivity(intent3);
                 break;
             case R.id.opNoticias:

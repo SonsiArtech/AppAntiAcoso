@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,12 +35,19 @@ public class Amigos extends AppCompatActivity {
         AdaptadorPersona adaptador = new AdaptadorPersona(this);
         lvAmigos.setAdapter(adaptador);
 
+        lvAmigos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(Amigos.this,listaAmigos.get(i).getNombre()+" "+listaAmigos.get(i).getApellido(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     class AdaptadorPersona extends ArrayAdapter<ClaseAmigos>{
 
         AppCompatActivity appCompatActivity;
-        public AdaptadorPersona(AppCompatActivity context, int resource) {
+        public AdaptadorPersona(AppCompatActivity context) {
             super(context, R.layout.amigos, listaAmigos);
 
             appCompatActivity = context;
@@ -49,6 +58,16 @@ public class Amigos extends AppCompatActivity {
             View item = inflater.inflate(R.layout.amigos, null);
 
             tvRutAmigos = item.findViewById(R.id.tvRutAmigo);
+            tvRutAmigos.setText(listaAmigos.get(posicion).getRut());
+
+            imgAvatar = item.findViewById(R.id.imageView);
+            if(listaAmigos.get(posicion).getGenero().equals("nb")){
+                imgAvatar.setImageResource(R.mipmap.advertencia);
+            } else if (listaAmigos.get(posicion).getGenero().equals("f")){
+                imgAvatar.setImageResource(R.mipmap.ayudar);
+            } else {
+                imgAvatar.setImageResource(R.mipmap.hogar);
+            }
 
             return  item;
         }
