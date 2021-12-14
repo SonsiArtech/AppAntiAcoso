@@ -14,13 +14,17 @@ import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
+    /*
     private TextView tvNombre;
     private TextView tvContrasena;
+
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        /*
 
         tvNombre = findViewById(R.id.tvUsuario);
         tvContrasena = findViewById(R.id.tvPass);
@@ -29,6 +33,8 @@ public class Home extends AppCompatActivity {
 
         tvNombre.setText(bundle.getString("nombre"));
         tvContrasena.setText(bundle.getString("contrasena"));
+
+         */
     }
 
     //nos ayuda a colocar el menu en nuestras paginas

@@ -18,7 +18,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/opAmigos"
-        android:title="Amigos" />
+        android:title="@string/amigos" />
     <item
         android:id="@+id/opNoticias"
         android:icon="@mipmap/noticias"

@@ -10,8 +10,12 @@
         android:id="@+id/lvAmigos"
         android:layout_width="409dp"
         android:layout_height="343dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="114dp" />
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"

@@ -1,9 +1,7 @@
 package com.example.anti_acoso;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,7 +22,9 @@ public class Amigos extends AppCompatActivity {
 
     private ArrayList<ClaseAmigos> listaAmigos = new ArrayList<ClaseAmigos>();
     private ListView lvAmigos;
+    private TextView tvNombreAmigos;
     private TextView tvRutAmigos;
+    private TextView tvGeneroAmigos;
     private ImageView imgAvatar;
 
     @Override
@@ -116,28 +116,34 @@ public class Amigos extends AppCompatActivity {
             LayoutInflater inflater = appCompatActivity.getLayoutInflater();
             View item = inflater.inflate(R.layout.amigos, null);
 
+            tvNombreAmigos = item.findViewById(R.id.tvNombreAmigo);
+            tvNombreAmigos.setText(listaAmigos.get(posicion).getNombre()+ " "+listaAmigos.get(posicion).getApellido());
             tvRutAmigos = item.findViewById(R.id.tvRutAmigo);
             tvRutAmigos.setText(listaAmigos.get(posicion).getRut());
+            tvGeneroAmigos = item.findViewById(R.id.tvGeneroAmigo);
+            tvGeneroAmigos.setText(listaAmigos.get(posicion).getGenero());
 
             imgAvatar = item.findViewById(R.id.imageView);
-            if(listaAmigos.get(posicion).getGenero().equals("nb")){
-                imgAvatar.setImageResource(R.mipmap.advertencia);
-            } else if (listaAmigos.get(posicion).getGenero().equals("f")){
-                imgAvatar.setImageResource(R.mipmap.ayudar);
+            if(listaAmigos.get(posicion).getGenero().equals("No Binario")){
+                imgAvatar.setImageResource(R.mipmap.nobinario);
+            } else if (listaAmigos.get(posicion).getGenero().equals("Femenino")){
+                imgAvatar.setImageResource(R.mipmap.femenino);
             } else {
-                imgAvatar.setImageResource(R.mipmap.hogar);
+                imgAvatar.setImageResource(R.mipmap.masculino);
             }
 
             return  item;
         }
 
     }
+
+    //metodo para llenar la lista de amigos
     public void llenar(){
-        listaAmigos.add(new ClaseAmigos("1-1", "Nicolas", "Lara", "nb"));
-        listaAmigos.add(new ClaseAmigos("1-2", "Bastian", "Silva", "m"));
-        listaAmigos.add(new ClaseAmigos("1-3", "Vanesa", "Hurtado", "f"));
-        listaAmigos.add(new ClaseAmigos("1-4", "Cecilia", "Sanhueza", "f"));
-        listaAmigos.add(new ClaseAmigos("1-5", "Elisandro", "Gutierres", "nb"));
-        listaAmigos.add(new ClaseAmigos("1-6", "Guaguillo", "Salas", "nb"));
+        listaAmigos.add(new ClaseAmigos("1-1", "Nicolas", "Lara", "No binario"));
+        listaAmigos.add(new ClaseAmigos("1-2", "Bastian", "Silva", "Masculino"));
+        listaAmigos.add(new ClaseAmigos("1-3", "Vanesa", "Hurtado", "Femenino"));
+        listaAmigos.add(new ClaseAmigos("1-4", "Cecilia", "Sanhueza", "Femenino"));
+        listaAmigos.add(new ClaseAmigos("1-5", "Elisandro", "Gutierres", "No binario"));
+        listaAmigos.add(new ClaseAmigos("1-6", "Guaguillo", "Salas", "No binario"));
     }
 }

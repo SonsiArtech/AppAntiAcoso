@@ -7,4 +7,6 @@
     <string name="home">Home</string>
     <string name="publicaci_n">Publicación</string>
     <string name="agregar">Agregar</string>
+    <string name="amigos">Amigos</string>
+    <string name="nb">No binario</string>
 </resources>
