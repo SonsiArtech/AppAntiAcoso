@@ -117,17 +117,23 @@ public class Publicacion extends AppCompatActivity {
                 Intent intent2 = new Intent(this, Denuncia.class);
                 startActivity(intent2);
                 break;
+            case R.id.opAmigos:
+                Toast.makeText(this,"Amigos seleccionado",Toast.LENGTH_SHORT).show();
+                finish();
+                Intent intent3 = new Intent(this, Amigos.class);
+                startActivity(intent3);
+                break;
             case R.id.opNoticias:
                 Toast.makeText(this,"Noticias seleccionado",Toast.LENGTH_SHORT).show();
                 finish();
-                Intent intent3 = new Intent(this, Noticias.class);
-                startActivity(intent3);
+                Intent intent4 = new Intent(this, Noticias.class);
+                startActivity(intent4);
                 break;
             case R.id.opAyuda:
                 Toast.makeText(this,"Ayuda seleccionado",Toast.LENGTH_SHORT).show();
                 finish();
-                Intent intent4 = new Intent(this, Ayuda.class);
-                startActivity(intent4);
+                Intent intent5 = new Intent(this, Ayuda.class);
+                startActivity(intent5);
                 break;
             case R.id.opCerrarSesion:
                 Toast.makeText(this,"Cerrando Sesión",Toast.LENGTH_SHORT).show();
