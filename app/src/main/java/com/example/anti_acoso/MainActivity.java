@@ -2,9 +2,13 @@ package com.example.anti_acoso;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -38,15 +42,20 @@ public class MainActivity extends AppCompatActivity {
         logo.setAnimation(animation2);
 
 
+
     }
 
     public void abrir(View view){
+
+
         Intent intent = new Intent(this, IniciarSesion.class);
         startActivity(intent);
+        finish();
     }
     public void abrirRegistrarse(View view){
         Intent intent = new Intent(this, Registrarse.class);
         startActivity(intent);
+        finish();
     }
 
 

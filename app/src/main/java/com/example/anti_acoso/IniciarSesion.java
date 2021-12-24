@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,8 +29,8 @@ public class IniciarSesion extends AppCompatActivity {
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo);
 
-        EditText nombre = findViewById(R.id.etNombre);
-        EditText contrasena = findViewById(R.id.etContrasena);
+        EditText nombre = findViewById(R.id.etUser);
+        EditText contrasena = findViewById(R.id.etPass);
         TextView bienvenido = findViewById(R.id.tvBienvenido);
         ImageView logo = findViewById(R.id.ivLogoInicio);
 
@@ -49,6 +48,8 @@ public class IniciarSesion extends AppCompatActivity {
     }
 
     public void salir(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 

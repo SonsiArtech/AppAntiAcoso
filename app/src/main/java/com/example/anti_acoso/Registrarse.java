@@ -2,7 +2,8 @@ package com.example.anti_acoso;
 
  import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+ import android.content.Intent;
+ import android.os.Bundle;
  import android.view.View;
 
 public class Registrarse extends AppCompatActivity {
@@ -14,6 +15,8 @@ public class Registrarse extends AppCompatActivity {
     }
 
     public void salirRegistrarse(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 }
